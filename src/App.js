@@ -1,25 +1,46 @@
-import logo from './logo.svg';
+import { useState } from 'react';
+import reactLogo from './assets/react.svg';
+import viteLogo from '/vite.svg';
 import './App.css';
-
+import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
 export const App = () => {
-	return (
-		<div className="App">
-			<header className="App-header">
-				<img src={logo} className="App-logo" alt="logo" />
-				<p>
-					Edit <code>src/App.js</code> and save to reload2.
-				</p>
-				<a
-					className="App-link"
-					href="https://reactjs.org"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					Learn React
-				</a>
-			</header>
-		</div>
-	);
+  const [count, setCount] = useState(0);
+  return /*#__PURE__*/_jsxs(_Fragment, {
+    children: [/*#__PURE__*/_jsxs("div", {
+      children: [/*#__PURE__*/_jsx("a", {
+        href: "https://vite.dev",
+        target: "_blank",
+        children: /*#__PURE__*/_jsx("img", {
+          src: viteLogo,
+          className: "logo",
+          alt: "Vite logo"
+        })
+      }), /*#__PURE__*/_jsx("a", {
+        href: "https://react.dev",
+        target: "_blank",
+        children: /*#__PURE__*/_jsx("img", {
+          src: reactLogo,
+          className: "logo react",
+          alt: "React logo"
+        })
+      })]
+    }), /*#__PURE__*/_jsx("h1", {
+      children: "Vite + React"
+    }), /*#__PURE__*/_jsxs("div", {
+      className: "card",
+      children: [/*#__PURE__*/_jsxs("button", {
+        onClick: () => setCount(count => count + 1),
+        children: ["count is ", count]
+      }), /*#__PURE__*/_jsxs("p", {
+        children: ["Edit ", /*#__PURE__*/_jsx("code", {
+          children: "src/App.jsx"
+        }), " and save to test HMR"]
+      })]
+    }), /*#__PURE__*/_jsx("p", {
+      className: "read-the-docs",
+      children: "Click on the Vite and React logos to learn more"
+    })]
+  });
 };
 
 
